@@ -1,0 +1,30 @@
+/*
+$am-blue: #0B2343;
+$black: $am-blue;
+$black-true: #000000;
+$blue-dark: #002B5C;
+$blue-medium: #004990;
+$blue-light: #007DC3;
+$blue-xlight: #F7FBFD;
+$green-light: #48A83E;
+$green:#3f6b09;
+$grey-border: #E5E5E5;
+$grey-dark: #999999;
+$grey-light: #E5E5E5;
+$grey-medium: #CCCCCC;
+$grey-text: #666666;
+$grey-xlight: #FAFAFA;
+$orange: #F97722;
+$purple: #5F3FB1;
+$red: #E91B2F;
+$teal: #1C869E;
+$white: #FFFFFF;
+$yellow: #FBAF28;
+$yellow: #FECC2F;
+
+*/
+/****
+	TIPOGRAFIA
+****/
+body {
+  font-family: "Arial", "Helvetica", sans-serif; }

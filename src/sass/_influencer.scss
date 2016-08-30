@@ -1,0 +1,18 @@
+#influencers{
+  picture{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    text-align: center;
+    padding-bottom: 25px;
+    
+  }
+}

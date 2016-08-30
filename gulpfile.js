@@ -15,12 +15,12 @@ tomado de http://callmenick.com/post/an-introduction-to-gulp
 gulp.task('scripts', function() {
   return gulp.src('./src/js/*.js')
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./dist/js/'))
+    .pipe(gulp.dest('./app/js/'))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('./app/js/'));
 });
 
 // styles
@@ -29,12 +29,12 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   return gulp.src('./src/sass/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('./app/css/'))
     .pipe(cssmin())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('./app/css/'));
 });
 
 gulp.task('watch', function() {

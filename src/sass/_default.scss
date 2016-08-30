@@ -1,14 +1,24 @@
 body{
 	font-family: $font-base;
-//	align-content: stretch;
-  //  align-items: stretch;
-   // display: flex;
-   // flex-flow: row nowrap;
+	//font-family: "Neue Haas Unica W01 Regular";
+    background: $blue-dark;
+    color: $white;
     height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.46;
+  //  background-image: url('../../images/delta-am-01.png') ; 
 }
+
+html {
+  height: 100%;
+}
+
 
 a{
 	text-decoration: none;
+	color: $white;
 }
 
 .contenedor-center {
@@ -21,6 +31,16 @@ a{
     */
 }
 
+#the-wrapper{
+	min-height:100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+}
 
 /*****************
 	header
@@ -30,13 +50,13 @@ a{
 header{
 	width: 100%;
 	position: relative;
-	height: 275px;
+	height: 220px;
 }
 
 .menu{
 	height: 77px;
 	margin: 0 auto;
-	width: 800px;
+	width: 700px;
 	position: relative;
 	ul{
 		position: relative;
@@ -49,7 +69,7 @@ header{
 	li{
 		display: block;
 		float: left;
-		width: 100px;
+		width: 116px;
 		a{
 			display: block;
 			height: 77px;
@@ -62,12 +82,115 @@ header{
 		position: relative;
 		margin-top: -50px;
 		display: block;
-		width: 275px;
+		width: 232px;
 		img{
 			display: block;
+			width: 100%;
 		}
 	}
 }
+
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+
+/****** nav ******/
+#nav-trigger {
+  display: none;
+  text-align: center; 
+  clear: both;
+  float: left;
+	span {
+	    display: block;
+	    background-color: none;
+	    border: 2px solid $acent;
+	    border-radius: 20px;
+	    color: white;
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    clear: both;
+	    width: 200px;
+	    padding: 5px 10px;
+	    margin: 0 auto;
+	    font-size: 11px;
+		letter-spacing: 1px;
+		min-height: 36px;
+		line-height: 22px;
+		&:hover {
+      	background-color:  $blue-dark; 
+      	}
+	  }
+	  span:after {
+      display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-left: solid 10px transparent;
+      border-top: solid 10px $acent;
+      border-right: solid 10px transparent; 
+  	}
+  	span.open:after {
+      border-left: solid 10px transparent;
+      border-top: none;
+      border-bottom: solid 10px $acent;
+      border-right: solid 10px transparent; }
+}
+ 
+nav#nav-mobile {
+  position: relative;
+  display: none; 
+	 ul {
+	    display: none;
+	    list-style-type: none;
+	    position: relative;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+		li {
+			    display: block;
+			    padding: 5px 0;
+			    margin: 0 5px;
+			    border-bottom: solid 1px $acent; }
+		li:last-child {
+	    	  border-bottom: none; }
+	       a {
+		    display: block;
+		    color: white;
+		    padding: 10px 30px; 
+			&:hover{
+				color: #fff; 
+			}
+		}
+	}// ul
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 950px) {
+  #nav-trigger {
+    display: block; }
+
+  nav#nav-main {
+    display: none; }
+
+  nav#nav-mobile {
+    display: block; }
+}
+
+
+
+
+
+
+/****************
+user
+
+***********************************************/
 .user{
 	position: absolute;
 	right: 20px;
@@ -107,26 +230,113 @@ header{
 }
 
 .container-center{
-	max-width: 600px;
 	margin: 0 auto;
+	padding-bottom: 90px;
 }
 
 .item-centered{
 	display: block;
 	margin: 0 auto;
+	float: none;
 }
 
 /*****************************
 
-		TEXT
+		TEXTOS
 
 ******************************/
 
 .main-title{
-	font-size: 20px;
 	margin: 10px 0;
+	span{
+		color: $acento;
+	}
 }
 
 .text-centered{
 	text-align: center;
+}
+
+p{
+
+
+}
+
+h1{
+	font-size: 35px;
+	font-family: $font-thin;
+}
+
+h2{
+	font-size: 28px;
+	font-family: $font-thin;
+}
+
+h3{
+	font-size: 22px;
+	
+}
+
+h4{
+	font-size: 18px;
+}
+/*****************************
+
+		Modal
+******************************/
+
+.modal-content{
+	background: $blue-dark;
+	.modal-title{
+		text-align: center;
+	}
+	.modal-body{
+		font-size: 80%;
+	}
+}
+/*****************************
+
+		Sponsors
+
+******************************/
+
+#ourSponsors{
+	ul{
+		height: 400px;
+		margin-top: 20px;
+		li{
+			img{
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width: 100%;
+	height: 60px;
+	a:hover{
+		color: $white;
+	}
+}
+
+.logo-deltaAm{
+	float: left;
+	max-width: 220px;
+	padding: 0px 20px 20px 0;
+}
+.footer-info{
+	font-size: 70%;
+	line-height: 120%;
+	a{
+		text-decoration: underline;
+	}
 }

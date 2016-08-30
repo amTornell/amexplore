@@ -1,5 +1,5 @@
 (function() {
 
-	console.log("app 2");
+	console.log("script app 2");
 
 })();

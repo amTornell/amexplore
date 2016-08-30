@@ -1,0 +1,81 @@
+form{
+    
+    fieldset{
+
+    }
+    input[type="text"], input[type="email"]{
+        width: 100%;
+    }
+    label{
+        width: 100%;
+    }
+    .small{
+        font-size: 80%;
+        a{
+            text-decoration: underline;
+            &:hover{
+                color: $acento;
+            }
+        }
+    }
+
+}
+
+#registro{
+    .avatar{
+        margin: 50px auto 0;
+        width: 150px;
+        display: block;
+        border-radius: 50%;
+        height: 150px;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#choose-activities{
+    .activity-info{
+        min-height: 30px;
+        padding: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+        font-family: $font-thin;
+    }
+    .selected{
+        background: $acento;
+        @include transition(color .5s ease);
+    }
+}
+#choose-influencer{
+    .mini-influencer{
+        background: none;
+        border: 0;
+        padding: 20px;
+        width: 100%;
+        @include transition(color .5s ease);
+        picture{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+            overflow: hidden;
+            border-radius: 50%;
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    h2{
+        font-size: 16px;
+        text-align: center;
+    }
+    .selected{
+        background: $acento;
+        @include transition(color .5s ease);
+    }
+    
+    
+}

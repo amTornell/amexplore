@@ -7,46 +7,112 @@
     <title>Nombre de campaña</title>
     
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="../dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../dist/css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  
-  <header id="mainHeader">
-    
-    <nav class="menu">
-      <ul>
-        <li><a href="">Mecánica</a></li>
-        <li><a href="">Participa</a></li>
-        <li><a href="">Premios</a></li>
-        <li class="logo"><a href=""><img src="http://placehold.it/275x275"></a></li>
-        <li><a href="">Youtubers</a></li>
-        <li><a href="">Actividades</a></li>
-        
-      </ul>
-      <!--<a href="" class="logo"><img src="http://placehold.it/275x275"></a>-->
-    </nav>
-    <div class="user">
-      <a href="">
-        <p><span class="avatar"><img src="https://placeimg.com/100/150/people"></span> <span class="points">1500</span></p>
-        <p class="username">Nombre de usuario que puede ser largo</p>
-      </a>
+  <div id="the-wrapper">
+    <header id="mainHeader">
+      <!-- menu desktop -->
+      <nav id="nav-main" class="menu">
+        <ul>
+          <li><a href="">Mecánica</a></li>
+          <li><a href="">Premios</a></li>
+          <li class="logo"><a href=""><img src="http://placehold.it/275x275"></a></li>
+          <li><a href="">Youtubers</a></li>
+          <li><a href="">Actividades</a></li>
+        </ul>
+      </nav>
+      <!-- /menu desktop -->
+      <!-- menu mobile -->
+      <div id="nav-trigger">
+          <span>Menu</span>
+      </div>
+      <nav id="nav-mobile">
+        <ul>
+          <li><a href="">Mecánica</a></li>
+          <li><a href="">Premios</a></li>
+          <li><a href="">Youtubers</a></li>
+          <li><a href="">Actividades</a></li>
+        </ul>
+      </nav>
+      <!-- / menu mobile -->
+      <div class="user">
+        <a href="">
+          <p><span class="avatar"><img src="https://placeimg.com/100/150/people"></span> <span class="points">1500</span></p>
+          <p class="username">Nombre de usuario que puede ser largo</p>
+        </a>
+        <a class="btn-main glyphicon glyphicon-menu-right" data-toggle="modal" data-target="#ourSponsors"><span>Our sponsors</span></a>
+      </div>
+    </header>
+    <!-- dynamic -->
+    <div class="container-center">
+      <div class="row animated fadeInUp">
+        <div class="col-md-6 item-centered">
+           <h1 class="main-title text-centered">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eos animi eum, rerum unde maiores sapiente cupiditate nam deserunt! Quisquam nobis, facere dolore maxime, reiciendis laborum dolorum rerum autem voluptatem.</p>
+          <p class="text-centered"><a href="" class="btn-main glyphicon glyphicon-menu-right"><span>Participar</span></a></p>
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="container-center">
-    <img src="http://placehold.it/350x150" class="item-centered">
-    <h1 class="main-title text-centered">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    </h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eos animi eum, rerum unde maiores sapiente cupiditate nam deserunt! Quisquam nobis, facere dolore maxime, reiciendis laborum dolorum rerum autem voluptatem.</p>
-    <a href="" class="btn btn-primary">Participa</a>
-  </div>
-  <footer id="mainFooter">
-      <p>¿Dudas? <a href="#">Escríbenos</a></p>
-      <p>&copy; 2015 Aeroméxico. Todos los derechos reservados. Revisa nuestros <a href="#" data-toggle="modal"  data-target="#terminos">términos y condiciones</a>.<br> Consulta el <a data-toggle="modal"  data-target="#aviso">aviso de privacidad</a></p>
-  </footer>
+    <!-- footer -->
+    <footer id="mainFooter">
+      <div class="row">
+        <div class="col-md-12">
+           <img class="logo-deltaAm" src="../images/delta-am-01.png" alt="logo delta aeromexico">
+          <div class="footer-info">
+            <p>¿Dudas? <a href="#">Escríbenos</a></p>
+            <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. Revisa nuestros <a href="#" data-toggle="modal"  data-target="#terminos">términos y condiciones</a>. Consulta el <a data-toggle="modal"  data-target="#aviso">aviso de privacidad</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+      <!-- modal sponsors-->
+  <div class="modal fade" id="ourSponsors" tabindex="-1" role="dialog" aria-labelledby="ourSponsors">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Our sponsors</h4>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis voluptates consequatur molestias deleniti amet debitis, sapiente sunt, voluptatibus culpa reiciendis at eius neque tempore dolorum earum totam maxime ipsum error.</p>
+          <ul>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-md-4">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+          </ul>
+        </div>
+        
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- / modal sponsors-->
+  </div><!-- #the-wrapper -->
+
+
+  <!-- scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="../dist/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-  <script src="../dist/js/vendor/bootstrap.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+.btn-main{
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    min-width: 220px;
+    padding: 15px;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 50px;
+    text-transform: uppercase;
+    &:hover{
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: $white;
+        text-decoration: none;
+    }
+    &:before{
+       position: absolute;
+        height: 100%;
+        font-size: 125%;
+        line-height: 3.5;
+        color: #fff;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        left: 70%;
+        opacity: 0;
+        top: -2.5px; 
+    }
+    &:hover:before {
+        left: 85%;
+        opacity: 1;
+    }
+    span{
+     	font-family: Arial, Helvetica;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,72 @@
+#influencers{
+  picture{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    text-align: center;
+    padding-bottom: 25px;
+    @include bp-small {
+      padding-bottom: 10px;
+    }
+    
+  }
+  li{
+    padding-bottom: 20px;
+  }
+}
+
+#the-activities{
+  li{
+    height: 120px;
+    picture{
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      border-radius: 50%;
+      display: block;
+      margin: 10px;
+      float: left;
+      img{
+        width: 100%;
+      }
+    }
+    h2{
+      font-size: 16px;
+      margin-top: 35px;
+       @include bp-medium {
+        margin-top: 0px;
+      }
+    }
+  }
+  li:nth-child(odd){
+    background:#985396;
+  }
+  li:nth-child(even){
+      background: $acento;
+  }
+  li:nth-child(3n+2){
+    background: #66FF66;
+  }
+  li:nth-child(5n+1){
+    background: #EBE54D;
+  }
+  li:nth-child(7n+2){
+    background: #BF1388;
+  }
+  li:nth-last-of-type(1){
+    background: red;
+    /*margin: 0 auto;
+    float: none;
+    clear: both;
+    */
+  }
+  
+}

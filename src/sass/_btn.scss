@@ -38,3 +38,9 @@
         letter-spacing: 1px;
     }
 }
+
+.link-basic{
+    &:hover{
+        color: $acento;
+    }
+}

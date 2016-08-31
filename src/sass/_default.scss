@@ -171,7 +171,7 @@ nav#nav-mobile {
 
 /* =Media Queries
 -------------------------------------------------------------- */
-@media all and (max-width: 950px) {
+@media all and (max-width: 1020px) {
   #nav-trigger {
     display: block; }
 
@@ -258,27 +258,41 @@ user
 }
 
 p{
-
+	@include bp-small {
+      font-size: 13px;
+    }
 
 }
 
 h1{
 	font-size: 35px;
 	font-family: $font-thin;
+	@include bp-small {
+      font-size: 25px;
+    }
 }
 
 h2{
 	font-size: 28px;
 	font-family: $font-thin;
+	@include bp-small {
+      font-size: 20px;
+    }
 }
 
 h3{
 	font-size: 22px;
+	@include bp-small {
+      font-size: 17px;
+    }
 	
 }
 
 h4{
 	font-size: 18px;
+	@include bp-small {
+      font-size: 15px;
+    }
 }
 /*****************************
 
@@ -326,16 +340,30 @@ h4{
 	a:hover{
 		color: $white;
 	}
+	@include bp-small {
+    	height: 100px;
+    }
 }
 
 .logo-deltaAm{
 	float: left;
 	max-width: 220px;
 	padding: 0px 20px 20px 0;
+	@include bp-small {
+     float: none;
+     margin: 5px auto;
+     padding: 20px 0 0;
+     display: block;
+    }
 }
 .footer-info{
 	font-size: 70%;
 	line-height: 120%;
+	@include bp-small {
+     p{	font-size: 10px;
+     	text-align: center;
+     }
+    }
 	a{
 		text-decoration: underline;
 	}

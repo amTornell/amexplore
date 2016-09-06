@@ -44,10 +44,12 @@
         });
     }
 
-    if( $('#choose-activities').length ){
-        $("input[type=checkbox][name=activity]").click(function() {
-            var bol = $("input[type=checkbox][name=activity]:checked").length >= 5;     
-            $("input[type=checkbox][name=activity]").not(":checked").attr("disabled",bol);
+
+    if($('#choose-activities').length){
+        $("input[type=checkbox].activity-item").click(function() {
+            var bol = $("input[type=checkbox].activity-item:checked").length >= 5;   
+            //    $("input[type=checkbox][name=activity]").not(":checked").attr("disabled",bol);  
+            $("input[type=checkbox].activity-item").not(":checked").attr("disabled",bol);
         });
         $(".activity-item").change(function() {
             if(this.checked) {
@@ -62,10 +64,26 @@
 
 
 
-    
 
-
-
+    /* daniela scripts */
+    $('.mini-influencer').click(function(){
+    $('select.youtuber option[value=1],select.youtuber option[value=2],select.youtuber option[value=3],select.youtuber option[value=4]').removeAttr('selected');
+    var influencer = $(this).val();
+        if(influencer == 1){
+            $('select.youtuber option[value=1]').attr('selected', 'selected');
+        }else if(influencer ==2){
+            $('select.youtuber option[value=2]').attr('selected', 'selected');
+        }else if(influencer == 3){
+            $('select.youtuber option[value=3]').attr('selected', 'selected');
+        }else{
+            $('select.youtuber option[value=4]').attr('selected', 'selected');
+        }
+    });
+    if( $('form').length ){
+          $('form').parsley();
+          $(".alert .alert-danger").delay(4000).hide(1500);
+          $(".alert .alert-success").delay(4000).hide(1500);
+    }
 
 
 })();

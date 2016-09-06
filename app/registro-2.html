@@ -54,47 +54,63 @@
               <div class="col-sm-10 item-centered">
                 <h1 class="main-title text-centered"><span>Step 2</span> of 3:  Choose the activities</h1>
                <p class="text-centered">Elige 5 actividades, gana 10 puntos por cada actividad que se realice</p>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="1" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="2" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="3" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="4" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="5" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="6" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="7" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
-                <div class="col-sm-6">
-                    <label class="activity-info">
-                        <input type="checkbox" name="activity" value="8" class="activity-item"> Nombre de actividad
-                    </label>
-                </div>
+               
 
+
+                 <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="activity-info">
+                        <input type="checkbox" name="activity[]" class="activity-item" value="{{$activitys->id}}" class="activity-item" data-parsley-mincheck="5">
+                         <picture>
+                            <img src="../images/act-1.jpg">
+                        </picture><span>{{$activitys->name}}</span>                 
+                    </label>
+                </div>
+                
+
+
+                
+
+            
 
                 <p class="text-centered">
                   <button class="btn-main glyphicon glyphicon-menu-right"><span>Next</span></button>

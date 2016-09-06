@@ -44,3 +44,20 @@
         color: $acento;
     }
 }
+
+.close{
+    color: $white;
+    opacity: 1;
+}
+
+#btnSponsor{
+    width: 149px;
+    height: 157px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: url('../../images/mayan_sponsors.png') no-repeat top center;
+    text-indent: -99999px;
+    z-index: 11;
+    margin-top: -79px;
+}

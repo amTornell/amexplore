@@ -8,7 +8,7 @@ body{
     margin: 0;
     padding: 0;
     line-height: 1.46;
-  //  background-image: url('../../images/delta-am-01.png') ; 
+  	background: url('../../images/mayan_bg.jpg') top center / 100% auto ; 
 }
 
 html {
@@ -35,6 +35,7 @@ a{
 	min-height:100%;
 	position:relative;
 	overflow: hidden;
+	z-index: 10;
 }
 
 .row{
@@ -56,36 +57,38 @@ header{
 .menu{
 	height: 77px;
 	margin: 0 auto;
-	width: 700px;
+	width: 842px;
 	position: relative;
 	ul{
 		position: relative;
 		width: 100%;
 		display: block;
-		background: $acento;
+		background:url('../../images/mayan_menu.png') no-repeat center top;
 		height: 77px;
-		margin-top: 50px;
+		margin-top: 70px;
 	}
 	li{
 		display: block;
 		float: left;
-		width: 116px;
+		width: 140px;
 		a{
 			display: block;
 			height: 77px;
 			width: 100%;
-			line-height: 77px;
+			line-height: 62px;
 			text-align: center;
+			font-family: $font-medium;
 		}
 	}
 	.logo{
 		position: relative;
-		margin-top: -50px;
+		margin-top: -75px;
 		display: block;
-		width: 232px;
+		width: 280px;
 		img{
 			display: block;
-			width: 100%;
+			margin: 0 auto;
+			max-width: 100%;
 		}
 	}
 }
@@ -101,29 +104,39 @@ header{
   display: none;
   text-align: center; 
   clear: both;
-  float: left;
+  margin-top: 5px;
+  float: left;	
+	
 	span {
 	    display: block;
 	    background-color: none;
-	    border: 2px solid $acent;
-	    border-radius: 20px;
+
 	    color: white;
 	    cursor: pointer;
 	    text-transform: uppercase;
 	    clear: both;
-	    width: 200px;
-	    padding: 5px 10px;
+	    width: 300px;
 	    margin: 0 auto;
-	    font-size: 11px;
+	    min-height: 120px;
+	    text-indent: -99999px;
+	   	/*
+	   	font-size: 11px;
+	   	padding: 5px 10px;
 		letter-spacing: 1px;
-		min-height: 36px;
+		border: 2px solid $acent;
+	    border-radius: 20px;
+		
 		line-height: 22px;
+		*/
+		background: url(../../images/mayan_logo.png) no-repeat 10px 0px;
+		background-size: 150px auto;
 		&:hover {
-      	background-color:  $blue-dark; 
+      	//background-color:  $blue-dark; 
       	}
+      	
 	  }
 	  span:after {
-      display: inline-block;
+    /*  display: inline-block;
       margin-left: 10px;
       width: 20px;
       height: 10px;
@@ -131,17 +144,31 @@ header{
       border-left: solid 10px transparent;
       border-top: solid 10px $acent;
       border-right: solid 10px transparent; 
+      */
   	}
   	span.open:after {
-      border-left: solid 10px transparent;
+    /*  border-left: solid 10px transparent;
       border-top: none;
       border-bottom: solid 10px $acent;
-      border-right: solid 10px transparent; }
+      border-right: solid 10px transparent; 
+      */
+  	}
+  	@include bp-small {
+   			width: 100%;
+   			float: none;
+   			span{
+   				width: 100%;
+   			}
+  	}
 }
  
 nav#nav-mobile {
   position: relative;
   display: none; 
+  clear: both;
+  background: url('../../images/mayan_logo_mobile.png') no-repeat top left / 80% auto;
+  z-index: 10;
+  width: 300px;
 	 ul {
 	    display: none;
 	    list-style-type: none;
@@ -153,25 +180,29 @@ nav#nav-mobile {
 	    text-align: center;
 		li {
 			    display: block;
-			    padding: 5px 0;
-			    margin: 0 5px;
+			    padding: 2px 0;
+			    margin: 0 2px;
 			    border-bottom: solid 1px $acent; }
 		li:last-child {
 	    	  border-bottom: none; }
 	       a {
 		    display: block;
-		    color: white;
-		    padding: 10px 30px; 
+		    color: $cafe;
+		    padding: 5px; 
+		    font-size: 13px;
 			&:hover{
 				color: #fff; 
 			}
+		}
+		li.logo{
+			display: none;
 		}
 	}// ul
 }
 
 /* =Media Queries
 -------------------------------------------------------------- */
-@media all and (max-width: 1020px) {
+@media all and (max-width: 1120px) {
   #nav-trigger {
     display: block; }
 
@@ -195,14 +226,18 @@ user
 	position: absolute;
 	right: 20px;
 	top: 0;
-	width: 200px;
+	width: 150px;
+	
 	a{
 		padding-top: 10px;
 		display: block;
+		&:hover{
+			color: $white;
+			text-decoration: none;
+		}
 	}
 	p{
 		position: relative;
-
 	}
 	.avatar{
 		border-radius: 50%;
@@ -222,11 +257,20 @@ user
 		bottom: 0;
 		left: 38px;
 		padding: 2px;
-		background: rgba(255,255,255,0.8);
+		background: $acento;
 	}
 	.username{
 		font-size: $font-size-small;
 	}
+	.btn-main{
+		width: 100%;
+		min-width: 100%;
+	}
+	@include bp-small {
+   		position: relative;
+   		width: 100%;
+   		left: 0;
+  	}
 }
 
 .container-center{
@@ -308,6 +352,9 @@ h4{
 		font-size: 80%;
 	}
 }
+.modal-backdrop.in {
+//	opacity: 0.9;
+}
 /*****************************
 
 		Sponsors
@@ -366,5 +413,38 @@ h4{
     }
 	a{
 		text-decoration: underline;
+	}
+}
+
+/*****************************
+
+		extras
+
+******************************/
+
+.leaf{
+	position: absolute;
+	z-index: 2;
+
+	img{
+		width: 70%;
+		max-width: 70%;
+		@include bp-small {
+    		width: 100%;
+    		max-width: 100%;
+    	}
+	}
+}
+
+.leaf-left{
+	left: 0;
+	bottom: 0;
+}
+
+.leaf-right{
+	right: 0;
+	bottom: 0;
+	img{
+		float: right;
 	}
 }

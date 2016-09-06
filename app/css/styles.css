@@ -116,7 +116,8 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  line-height: 1.46; }
+  line-height: 1.46;
+  background: url("../../images/mayan_bg.jpg") top center/100% auto; }
 
 html {
   height: 100%; }
@@ -137,7 +138,8 @@ a {
 #the-wrapper {
   min-height: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 10; }
 
 .row {
   max-width: 1000px;
@@ -155,33 +157,35 @@ header {
 .menu {
   height: 77px;
   margin: 0 auto;
-  width: 700px;
+  width: 842px;
   position: relative; }
   .menu ul {
     position: relative;
     width: 100%;
     display: block;
-    background: #00B7C6;
+    background: url("../../images/mayan_menu.png") no-repeat center top;
     height: 77px;
-    margin-top: 50px; }
+    margin-top: 70px; }
   .menu li {
     display: block;
     float: left;
-    width: 116px; }
+    width: 140px; }
     .menu li a {
       display: block;
       height: 77px;
       width: 100%;
-      line-height: 77px;
-      text-align: center; }
+      line-height: 62px;
+      text-align: center;
+      font-family: "Neue Haas Unica W01 Medium It"; }
   .menu .logo {
     position: relative;
-    margin-top: -50px;
+    margin-top: -75px;
     display: block;
-    width: 232px; }
+    width: 280px; }
     .menu .logo img {
       display: block;
-      width: 100%; }
+      margin: 0 auto;
+      max-width: 100%; }
 
 /*******************************************
 		menu mobile
@@ -192,43 +196,60 @@ header {
   display: none;
   text-align: center;
   clear: both;
+  margin-top: 5px;
   float: left; }
   #nav-trigger span {
     display: block;
     background-color: none;
-    border: 2px solid #00B7C6;
-    border-radius: 20px;
     color: white;
     cursor: pointer;
     text-transform: uppercase;
     clear: both;
-    width: 200px;
-    padding: 5px 10px;
+    width: 300px;
     margin: 0 auto;
-    font-size: 11px;
-    letter-spacing: 1px;
-    min-height: 36px;
-    line-height: 22px; }
-    #nav-trigger span:hover {
-      background-color: #011133; }
+    min-height: 120px;
+    text-indent: -99999px;
+    /*
+	   	font-size: 11px;
+	   	padding: 5px 10px;
+		letter-spacing: 1px;
+		border: 2px solid $acent;
+	    border-radius: 20px;
+		
+		line-height: 22px;
+		*/
+    background: url(../../images/mayan_logo.png) no-repeat 10px 0px;
+    background-size: 150px auto; }
   #nav-trigger span:after {
-    display: inline-block;
-    margin-left: 10px;
-    width: 20px;
-    height: 10px;
-    content: "";
-    border-left: solid 10px transparent;
-    border-top: solid 10px #00B7C6;
-    border-right: solid 10px transparent; }
+    /*  display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-left: solid 10px transparent;
+      border-top: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */ }
   #nav-trigger span.open:after {
-    border-left: solid 10px transparent;
-    border-top: none;
-    border-bottom: solid 10px #00B7C6;
-    border-right: solid 10px transparent; }
+    /*  border-left: solid 10px transparent;
+      border-top: none;
+      border-bottom: solid 10px $acent;
+      border-right: solid 10px transparent; 
+      */ }
+  @media only screen and (max-width: 30em) {
+    #nav-trigger {
+      width: 100%;
+      float: none; }
+      #nav-trigger span {
+        width: 100%; } }
 
 nav#nav-mobile {
   position: relative;
-  display: none; }
+  display: none;
+  clear: both;
+  background: url("../../images/mayan_logo_mobile.png") no-repeat top left/80% auto;
+  z-index: 10;
+  width: 300px; }
   nav#nav-mobile ul {
     display: none;
     list-style-type: none;
@@ -240,21 +261,24 @@ nav#nav-mobile {
     text-align: center; }
     nav#nav-mobile ul li {
       display: block;
-      padding: 5px 0;
-      margin: 0 5px;
+      padding: 2px 0;
+      margin: 0 2px;
       border-bottom: solid 1px #00B7C6; }
     nav#nav-mobile ul li:last-child {
       border-bottom: none; }
     nav#nav-mobile ul a {
       display: block;
-      color: white;
-      padding: 10px 30px; }
+      color: #591C0D;
+      padding: 5px;
+      font-size: 13px; }
       nav#nav-mobile ul a:hover {
         color: #fff; }
+    nav#nav-mobile ul li.logo {
+      display: none; }
 
 /* =Media Queries
 -------------------------------------------------------------- */
-@media all and (max-width: 1020px) {
+@media all and (max-width: 1120px) {
   #nav-trigger {
     display: block; }
   nav#nav-main {
@@ -270,10 +294,13 @@ user
   position: absolute;
   right: 20px;
   top: 0;
-  width: 200px; }
+  width: 150px; }
   .user a {
     padding-top: 10px;
     display: block; }
+    .user a:hover {
+      color: #fff;
+      text-decoration: none; }
   .user p {
     position: relative; }
   .user .avatar {
@@ -292,9 +319,17 @@ user
     bottom: 0;
     left: 38px;
     padding: 2px;
-    background: rgba(255, 255, 255, 0.8); }
+    background: #00B7C6; }
   .user .username {
     font-size: 11px; }
+  .user .btn-main {
+    width: 100%;
+    min-width: 100%; }
+  @media only screen and (max-width: 30em) {
+    .user {
+      position: relative;
+      width: 100%;
+      left: 0; } }
 
 .container-center {
   margin: 0 auto;
@@ -408,6 +443,32 @@ h4 {
   .footer-info a {
     text-decoration: underline; }
 
+/*****************************
+
+		extras
+
+******************************/
+.leaf {
+  position: absolute;
+  z-index: 2; }
+  .leaf img {
+    width: 70%;
+    max-width: 70%; }
+    @media only screen and (max-width: 30em) {
+      .leaf img {
+        width: 100%;
+        max-width: 100%; } }
+
+.leaf-left {
+  left: 0;
+  bottom: 0; }
+
+.leaf-right {
+  right: 0;
+  bottom: 0; }
+  .leaf-right img {
+    float: right; }
+
 .btn-main {
   background-color: transparent;
   border: 1px solid #FFFFFF;
@@ -447,6 +508,21 @@ h4 {
 .link-basic:hover {
   color: #00B7C6; }
 
+.close {
+  color: #fff;
+  opacity: 1; }
+
+#btnSponsor {
+  width: 149px;
+  height: 157px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: url("../../images/mayan_sponsors.png") no-repeat top center;
+  text-indent: -99999px;
+  z-index: 11;
+  margin-top: -79px; }
+
 #the-profile .avatar {
   position: relative;
   padding-bottom: 25px; }
@@ -462,7 +538,18 @@ h4 {
     z-index: 10;
     float: right;
     margin-top: -100px;
-    right: 50px; }
+    right: 50px;
+    background: url(../../images/mayan_profile.png) no-repeat center center;
+    width: 166px;
+    height: 180px;
+    text-align: center; }
+    #the-profile .avatar .avatar-influencer img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 25px;
+      border: 2px solid #fff; }
 
 #the-profile .points {
   text-transform: uppercase; }
@@ -509,46 +596,54 @@ h4 {
 #influencers li {
   padding-bottom: 20px; }
 
-#the-activities li {
-  height: 120px; }
-  #the-activities li picture {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-    display: block;
-    margin: 10px;
-    float: left; }
-    #the-activities li picture img {
-      width: 100%; }
-  #the-activities li h2 {
-    font-size: 16px;
-    margin-top: 35px; }
+#the-activities {
+  /*
+  li:nth-child(3n+2){
+    background: #66FF66;
+  }
+  li:nth-child(5n+1){
+    background: #EBE54D;
+  }
+  li:nth-child(7n+2){
+    background: #BF1388;
+  }
+  li:nth-last-of-type(1){
+    background: red;
+  }
+  */ }
+  #the-activities li {
+    height: 120px; }
+    #the-activities li picture {
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      border-radius: 50%;
+      display: block;
+      margin: 10px;
+      float: left;
+      border: 2px solid #EBCC48;
+      box-shadow: 1px 3px 2px #2C1307; }
+      #the-activities li picture img {
+        width: 100%; }
+    #the-activities li h2 {
+      font-size: 16px;
+      margin-top: 35px; }
+      @media only screen and (max-width: 765px) {
+        #the-activities li h2 {
+          margin-top: 0px;
+          padding-top: 30px; } }
+  #the-activities li:nth-child(odd) {
+    background: url("../../images/mayan_tabla1.png") no-repeat top center; }
     @media only screen and (max-width: 765px) {
-      #the-activities li h2 {
-        margin-top: 0px; } }
-
-#the-activities li:nth-child(odd) {
-  background: #985396; }
-
-#the-activities li:nth-child(even) {
-  background: #00B7C6; }
-
-#the-activities li:nth-child(3n+2) {
-  background: #66FF66; }
-
-#the-activities li:nth-child(5n+1) {
-  background: #EBE54D; }
-
-#the-activities li:nth-child(7n+2) {
-  background: #BF1388; }
-
-#the-activities li:nth-last-of-type(1) {
-  background: red;
-  /*margin: 0 auto;
-    float: none;
-    clear: both;
-    */ }
+      #the-activities li:nth-child(odd) {
+        background: url("../../images/mayan_tabla3.png") no-repeat top center;
+        background-size: cover; } }
+  #the-activities li:nth-child(even) {
+    background: url("../../images/mayan_tabla2.png") no-repeat top center; }
+    @media only screen and (max-width: 765px) {
+      #the-activities li:nth-child(even) {
+        background: url("../../images/mayan_tabla3.png") no-repeat top center;
+        background-size: cover; } }
 
 form input[type="text"], form input[type="email"] {
   width: 100%; }
@@ -579,6 +674,9 @@ form .small {
   font-family: "Neue Haas Unica W01 Thin"; }
   #choose-activities .activity-info:hover {
     cursor: pointer; }
+  #choose-activities .activity-info span {
+    margin-top: 20px;
+    display: block; }
 
 #choose-activities .selected {
   background: #00B7C6;
@@ -587,6 +685,25 @@ form .small {
   -ms-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease; }
+
+#choose-activities picture {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+  float: left;
+  border: 2px solid #00B7C6; }
+  #choose-activities picture img {
+    width: 100%; }
+
+#choose-activities .activity-item {
+  float: left;
+  margin-top: 25px; }
+
+#choose-activities .col-sm-6 {
+  display: table; }
 
 #choose-influencer .mini-influencer {
   background: none;
@@ -619,3 +736,46 @@ form .small {
   -ms-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease; }
+
+/***********
+            Validaciones
+***************************/
+input.parsley-success, select.parsley-success, textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6; }
+
+input.parsley-error, select.parsley-error, textarea.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7; }
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in; }
+  .parsley-errors-list.filled {
+    opacity: 1;
+    z-index: 500;
+    position: relative; }
+
+li.parsley-required {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: #81F7F3;
+  border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: #0B615E;
+  padding: 5px;
+  border: 2px solid #01DFD7;
+  position: absolute;
+  z-index: 800; }

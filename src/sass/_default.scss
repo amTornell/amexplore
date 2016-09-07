@@ -78,6 +78,11 @@ header{
 			line-height: 62px;
 			text-align: center;
 			font-family: $font-medium;
+			text-shadow: 1px 1px 1px $cafe;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
 		}
 	}
 	.logo{
@@ -106,7 +111,8 @@ header{
   clear: both;
   margin-top: 5px;
   float: left;	
-	
+  position: relative;
+  z-index: 20;		
 	span {
 	    display: block;
 	    background-color: none;
@@ -128,10 +134,13 @@ header{
 		
 		line-height: 22px;
 		*/
-		background: url(../../images/mayan_logo.png) no-repeat 10px 0px;
+		background: url(../../images/mayan_logo.png) no-repeat top center;
 		background-size: 150px auto;
 		&:hover {
       	//background-color:  $blue-dark; 
+      	}
+      	@include bp-small{
+      		background-position: 10px 0;
       	}
       	
 	  }
@@ -166,9 +175,11 @@ nav#nav-mobile {
   position: relative;
   display: none; 
   clear: both;
-  background: url('../../images/mayan_logo_mobile.png') no-repeat top left / 80% auto;
+  background: url('../../images/mayan_logo_mobile.png') no-repeat top left / 100% auto;
   z-index: 10;
   width: 300px;
+  top: -22px;
+  z-index: 10;
 	 ul {
 	    display: none;
 	    list-style-type: none;
@@ -178,20 +189,30 @@ nav#nav-mobile {
 	    margin-left: auto;
 	    margin-right: auto;
 	    text-align: center;
+	    width: 80%;
+	    height: 200px;
+	    padding-top: 20px;
 		li {
 			    display: block;
 			    padding: 2px 0;
 			    margin: 0 2px;
-			    border-bottom: solid 1px $acent; }
+			    border-bottom: solid 1px $cafe;
+			    border-top: solid 1px $yellow;
+		}
+		li:first-child{
+			border-top: none;
+		}
 		li:last-child {
-	    	  border-bottom: none; }
+	    	  border-bottom: none; 
+	    }
 	       a {
 		    display: block;
 		    color: $cafe;
 		    padding: 5px; 
-		    font-size: 13px;
+		    font-size: 15px;
 			&:hover{
 				color: #fff; 
+				text-decoration: none;
 			}
 		}
 		li.logo{
@@ -267,9 +288,8 @@ user
 		min-width: 100%;
 	}
 	@include bp-small {
-   		position: relative;
-   		width: 100%;
-   		left: 0;
+   		//width: 100%;
+   		width: 100px;
   	}
 }
 

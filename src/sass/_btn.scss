@@ -60,4 +60,10 @@
     text-indent: -99999px;
     z-index: 11;
     margin-top: -79px;
+    @include bp-small {
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        display: block;
+    }
 }

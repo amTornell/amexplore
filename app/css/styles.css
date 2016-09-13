@@ -440,7 +440,7 @@ h4 {
 
 .logo-deltaAm {
   float: left;
-  max-width: 220px;
+  max-width: 300px;
   padding: 0px 20px 20px 0; }
   @media only screen and (max-width: 30em) {
     .logo-deltaAm {
@@ -466,7 +466,8 @@ h4 {
 ******************************/
 .leaf {
   position: absolute;
-  z-index: 2; }
+  z-index: 2;
+  position: fixed; }
   .leaf img {
     width: 70%;
     max-width: 70%; }
@@ -553,7 +554,7 @@ h4 {
     height: 200px;
     overflow: hidden;
     border-radius: 50%;
-    border: 4px solid #00B7C6;
+    border: 4px solid;
     margin: 0 auto; }
   #the-profile .avatar .avatar-influencer {
     position: relative;
@@ -571,7 +572,7 @@ h4 {
       border-radius: 50%;
       overflow: hidden;
       margin-top: 25px;
-      border: 2px solid #fff; }
+      border: 4px solid; }
 
 #the-profile .points {
   text-transform: uppercase; }
@@ -604,19 +605,31 @@ h4 {
   overflow: hidden;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 10px; }
+  margin: 0 auto 10px;
+  border: 3px solid; }
   #influencers picture img {
     width: 100%; }
 
 #influencers h2 {
   text-align: center;
-  padding-bottom: 25px; }
+  padding-bottom: 10px;
+  font-size: 20px; }
   @media only screen and (max-width: 30em) {
     #influencers h2 {
       padding-bottom: 10px; } }
 
 #influencers li {
   padding-bottom: 20px; }
+
+#influencers .social li {
+  display: inline-block;
+  padding: 10px 5px; }
+
+#influencers .social a {
+  display: block; }
+  #influencers .social a img {
+    border-radius: 50%;
+    border: 1px solid #fff; }
 
 #the-activities {
   /*
@@ -667,8 +680,33 @@ h4 {
         background: url("../../images/mayan_tabla3.png") no-repeat top center;
         background-size: cover; } }
 
+.participant-1 img, .participant-1 .user-avatar {
+  border-color: #66FF66 !important; }
+
+.participant-1 picture {
+  border-color: #66FF66 !important; }
+
+.participant-2 img, .participant-2 .user-avatar {
+  border-color: #EBE54D !important; }
+
+.participant-2 picture {
+  border-color: #EBE54D !important; }
+
+.participant-3 img, .participant-3 .user-avatar {
+  border-color: #BF1388 !important; }
+
+.participant-3 picture {
+  border-color: #BF1388 !important; }
+
+.participant-4 img, .participant-4 .user-avatar {
+  border-color: #00B7C6 !important; }
+
+.participant-4 picture {
+  border-color: #00B7C6 !important; }
+
 form input[type="text"], form input[type="email"] {
-  width: 100%; }
+  width: 100%;
+  color: #011133; }
 
 form label {
   width: 100%; }
@@ -801,3 +839,100 @@ li.parsley-required {
   border: 2px solid #01DFD7;
   position: absolute;
   z-index: 800; }
+
+input.send-btn.guardar {
+  border: 0;
+  background: url("../images/ok.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+input.send-btn.eliminar {
+  border: 0;
+  background: url("../images/trash.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+input.send-btn.rechazar {
+  border: 0;
+  background: url("../images/delete.png") center center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+.show {
+  display: block; }
+
+[data-tooltip], .tooltip {
+  position: relative;
+  cursor: pointer; }
+
+[data-tooltip]:before, [data-tooltip]:after, .tooltip:before, .tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  -ms-filter: "alpha(Opacity=0)";
+  filter: progid:dximagetransform.microsoft.alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: none; }
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after, .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after {
+  visibility: visible;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: progid:dximagetransform.microsoft.alpha(Opacity=100);
+  opacity: 1; }
+
+.tooltip:before, [data-tooltip]:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: ""; }
+
+.tooltip:after, [data-tooltip]:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 120px;
+  background-color: #1783ff;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  line-height: 1.2; }
+
+[data-tooltip]:before, [data-tooltip]:after, .tooltip:before, .tooltip:after, .tooltip-top:before, .tooltip-top:after {
+  bottom: 100%;
+  left: 50%; }
+
+[data-tooltip]:before, .tooltip:before, .tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #1783ff; }
+
+[data-tooltip]:after, .tooltip:after, .tooltip-top:after {
+  margin-left: -55px; }
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after, .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after, .tooltip-top:hover:before, .tooltip-top:hover:after, .tooltip-top:focus:before, .tooltip-top:focus:after {
+  -webkit-transform: translatey(-12px);
+  -moz-transform: translatey(-12px);
+  transform: translatey(-12px); }
+
+.tooltip-bottom:before, .tooltip-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%; }
+
+.tooltip-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #1783ff; }
+
+.tooltip-bottom:hover:before, .tooltip-bottom:hover:after, .tooltip-bottom:focus:before, .tooltip-bottom:focus:after {
+  -webkit-transform: translatey(12px);
+  -moz-transform: translatey(12px);
+  transform: translatey(12px); }

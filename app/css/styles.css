@@ -800,15 +800,20 @@ form .small {
 /***********
             Validaciones
 ***************************/
-input.parsley-success, select.parsley-success, textarea.parsley-success {
-  color: #468847;
-  background-color: #DFF0D8;
-  border: 1px solid #D6E9C6; }
+input.parsley-success, select.parsley-success, textarea.parsley-success, .alert-success {
+  color: #fff;
+  background-color: #19D2AD;
+  border: 0;
+  border-radius: 0; }
 
-input.parsley-error, select.parsley-error, textarea.parsley-error {
-  color: #B94A48;
-  background-color: #F2DEDE;
-  border: 1px solid #EED3D7; }
+input.parsley-error, select.parsley-error, textarea.parsley-error, .alert-danger {
+  color: #fff;
+  background-color: red;
+  border: 0;
+  border-radius: 0; }
+
+.alert-success, .alert-danger {
+  text-align: center; }
 
 .parsley-errors-list {
   margin: 2px 0 3px;
@@ -824,7 +829,9 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
   .parsley-errors-list.filled {
     opacity: 1;
     z-index: 500;
-    position: relative; }
+    position: relative;
+    background: red;
+    padding: 5px; }
 
 li.parsley-required {
   display: block;

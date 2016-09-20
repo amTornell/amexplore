@@ -1,7 +1,7 @@
 .btn-main{
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    min-width: 220px;
+    min-width: 280px;
     padding: 15px;
     letter-spacing: 5px;
     font-size: 12px;
@@ -60,10 +60,35 @@
     text-indent: -99999px;
     z-index: 11;
     margin-top: -79px;
-    @include bp-small {
-        position: relative;
-        top: 0;
-        margin-top: 0;
-        display: block;
+    @include bp-medium {
+       display: none;
     }
+}
+
+
+#btnSponsorMobile{
+    width: 149px;
+    height: 40px;
+    position: relative;
+    background: url('../../images/mayan_sponsors_mobile.png') no-repeat top center;
+    text-indent: -99999px;
+    z-index: 11;
+    display: none;
+    @include bp-medium{
+        display: block;
+        float: right;
+    }
+    @include bp-small {
+       display: block;
+       margin: 0 auto;
+       float: none;
+    }
+}
+
+#btn-logout{
+   // margin-top: 5px;
+   float: left;
+   font-size: 13px;
+   background: rgba(255,255,255,0.8);
+   border: 0;
 }

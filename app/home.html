@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title>Nombre de campaña</title>
-    
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -49,11 +48,16 @@
       <!-- / menu mobile -->
       <div class="user">
         <a href="">
-          <p><span class="avatar"><img src="https://placeimg.com/100/150/people"></span> <span class="points">1500</span></p>
-          <p class="username">Nombre de usuario que puede ser largo</p>
+          <p><span class="avatar"><img src="https://placeimg.com/100/150/people"></span> <span class="points">1500</span>
+              <button onclick="window.location.href='logout'"  id="btn-logout"><span>Logout</span></button>
+          </p>
+          <!--<p class="username">Nombre de usuario que puede ser largo</p>-->
         </a>
        <!-- <a class="btn-main glyphicon glyphicon-menu-right" data-toggle="modal" data-target="#ourSponsors" ><span>Our sponsors</span></a>-->
+             <button onclick="window.location.href='logout'" class="btn-main glyphicon glyphicon-menu-right" id="btn-logout"><span>Logout</span></button>
+
       </div>
+       <a id="btnSponsorMobile" data-toggle="modal" data-target="#ourSponsors">our sponsors</a>
     </header>
     <!-- dynamic -->
     <div class="container-center">
@@ -71,10 +75,18 @@
     <footer id="mainFooter">
       <div class="row">
         <div class="col-md-12">
-           <img class="logo-deltaAm" src="../images/delta-am-01.png" alt="logo delta aeromexico">
-          <div class="footer-info">
-            <p>¿Dudas? <a href="#">Escríbenos</a></p>
-            <p>&copy; 2016 Aeroméxico. Todos los derechos reservados. Revisa nuestros <a href="#" data-toggle="modal"  data-target="#terms">Terms and conditions</a>. Consulta el <a href="https://aeromexico.com/en/travel-with-aeromexico/preparing-your-trip/regulations-and-policies/privacy-policy/?site=us" target="_blank">aviso de privacidad</a></p>
+          <img class="logo-deltaAm" src="../images/delta-am-01.png" alt="logo delta aeromexico">
+          
+          <div class="footer-info">           
+            <ul>
+            <li class="col-xs-6">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+            <li class="col-xs-6">
+              <a href=""><img src="https://placeimg.com/200/150/any"></a>
+            </li>
+          </ul>
+            <p>&copy; 2016 Aeroméxico. All rights reserved. View <a data-target="#terms" data-toggle="modal" href="#">Terms and Conditions.</a>.  Consult <a target="_blank" href="https://aeromexico.com/en/travel-with-aeromexico/preparing-your-trip/regulations-and-policies/privacy-policy/?site=us">Privacy Police.</a></p>
           </div>
         </div>
       </div>

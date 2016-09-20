@@ -153,6 +153,12 @@ header {
   width: 100%;
   position: relative;
   height: 220px; }
+  @media only screen and (max-width: 30em) {
+    header {
+      height: 170px; } }
+
+small {
+  font-size: 70%; }
 
 .menu {
   height: 77px;
@@ -176,7 +182,7 @@ header {
       width: 100%;
       line-height: 62px;
       text-align: center;
-      font-family: "Neue Haas Unica W01 Medium It";
+      font-family: "Neue Haas Unica W01 Regular";
       text-shadow: 1px 1px 1px #591C0D; }
       .menu li a:hover {
         text-decoration: none;
@@ -285,9 +291,10 @@ nav#nav-mobile {
       border-bottom: none; }
     nav#nav-mobile ul a {
       display: block;
-      color: #591C0D;
+      color: #fff;
       padding: 5px;
-      font-size: 15px; }
+      font-size: 15px;
+      font-family: "Neue Haas Unica W01 Regular"; }
       nav#nav-mobile ul a:hover {
         color: #fff;
         text-decoration: none; }
@@ -311,8 +318,9 @@ user
 .user {
   position: absolute;
   right: 20px;
-  top: 0;
-  width: 150px; }
+  top: -50px;
+  width: 150px;
+  z-index: 50; }
   .user a {
     padding-top: 10px;
     display: block; }
@@ -323,11 +331,11 @@ user
     position: relative; }
   .user .avatar {
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     display: block;
     overflow: hidden;
-    border: 1px solid #00B7C6; }
+    border: 3px solid #00B7C6; }
     .user .avatar img {
       width: 100%; }
   .user .points {
@@ -335,21 +343,26 @@ user
     font-weight: bold;
     position: absolute;
     bottom: 0;
-    left: 38px;
+    left: 70px;
     padding: 2px;
-    background: #00B7C6; }
+    background: #00B7C6;
+    border-radius: 3px; }
   .user .username {
     font-size: 11px; }
   .user .btn-main {
     width: 100%;
     min-width: 100%; }
-  @media only screen and (max-width: 30em) {
+  @media only screen and (max-width: 765px) {
     .user {
-      width: 100px; } }
+      width: 100px;
+      top: 0px; }
+      .user .avatar {
+        width: 80px;
+        height: 80px; } }
 
 .container-center {
   margin: 0 auto;
-  padding-bottom: 90px; }
+  padding-bottom: 150px; }
 
 .item-centered {
   display: block;
@@ -431,33 +444,52 @@ h4 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px; }
+  height: 135px; }
   #mainFooter a:hover {
     color: #fff; }
   @media only screen and (max-width: 30em) {
     #mainFooter {
-      height: 100px; } }
+      height: 130px; } }
+  #mainFooter ul {
+    width: 190px;
+    display: block;
+    margin: 0px auto 20px;
+    float: left; }
+    #mainFooter ul img {
+      width: 100%; }
+    @media only screen and (max-width: 30em) {
+      #mainFooter ul {
+        float: none;
+        clear: both;
+        width: 140px; } }
 
 .logo-deltaAm {
-  float: left;
-  max-width: 300px;
-  padding: 0px 20px 20px 0; }
+  max-width: 350px;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto; }
   @media only screen and (max-width: 30em) {
     .logo-deltaAm {
-      float: none;
       margin: 5px auto;
-      padding: 20px 0 0;
-      display: block; } }
+      padding: 10px 0 0;
+      display: block;
+      width: 280px; } }
 
 .footer-info {
   font-size: 70%;
-  line-height: 120%; }
-  @media only screen and (max-width: 30em) {
-    .footer-info p {
-      font-size: 10px;
-      text-align: center; } }
+  line-height: 120%;
+  width: 500px;
+  margin: 0 auto; }
   .footer-info a {
     text-decoration: underline; }
+  @media only screen and (max-width: 30em) {
+    .footer-info {
+      width: 100%; }
+      .footer-info p {
+        font-size: 10px;
+        text-align: center;
+        display: block;
+        clear: both; } }
 
 /*****************************
 
@@ -489,7 +521,7 @@ h4 {
 .btn-main {
   background-color: transparent;
   border: 1px solid #FFFFFF;
-  min-width: 220px;
+  min-width: 280px;
   padding: 15px;
   letter-spacing: 5px;
   font-size: 12px;
@@ -539,12 +571,33 @@ h4 {
   text-indent: -99999px;
   z-index: 11;
   margin-top: -79px; }
-  @media only screen and (max-width: 30em) {
+  @media only screen and (max-width: 765px) {
     #btnSponsor {
-      position: relative;
-      top: 0;
-      margin-top: 0;
-      display: block; } }
+      display: none; } }
+
+#btnSponsorMobile {
+  width: 149px;
+  height: 40px;
+  position: relative;
+  background: url("../../images/mayan_sponsors_mobile.png") no-repeat top center;
+  text-indent: -99999px;
+  z-index: 11;
+  display: none; }
+  @media only screen and (max-width: 765px) {
+    #btnSponsorMobile {
+      display: block;
+      float: right; } }
+  @media only screen and (max-width: 30em) {
+    #btnSponsorMobile {
+      display: block;
+      margin: 0 auto;
+      float: none; } }
+
+#btn-logout {
+  float: left;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 0; }
 
 #the-profile .avatar {
   position: relative;
@@ -606,7 +659,7 @@ h4 {
   border-radius: 50%;
   display: block;
   margin: 0 auto 10px;
-  border: 3px solid; }
+  border: 6px solid; }
   #influencers picture img {
     width: 100%; }
 
@@ -623,7 +676,7 @@ h4 {
 
 #influencers .social li {
   display: inline-block;
-  padding: 10px 5px; }
+  padding: 10px 1px; }
 
 #influencers .social a {
   display: block; }
@@ -679,6 +732,12 @@ h4 {
       #the-activities li:nth-child(even) {
         background: url("../../images/mayan_tabla3.png") no-repeat top center;
         background-size: cover; } }
+
+ol.list li {
+  padding-bottom: 15px; }
+
+ol.list li:last-child {
+  padding-bottom: 0; }
 
 .participant-1 img, .participant-1 .user-avatar {
   border-color: #66FF66 !important; }

@@ -3,7 +3,7 @@ form{
     fieldset{
 
     }
-    input[type="text"], input[type="email"]{
+    input[type="text"], input[type="email"], select, option{
         width: 100%;
         color: $blue-dark;
     }

@@ -275,10 +275,12 @@ user
 		display: block;
 		overflow: hidden;
 		border: 3px solid $acento;
+		margin: 0 auto;
 		img{
 			width: 100%;
 		}
 	}
+	/*
 	.points{
 		font-size: $font-size-base;
 		font-weight: bold;
@@ -295,7 +297,7 @@ user
 	.btn-main{
 		width: 100%;
 		min-width: 100%;
-	}
+	}*/
 	@include bp-medium {
    		//width: 100%;
    		width: 100px;
@@ -305,6 +307,29 @@ user
    			height: 80px;
    		}
   	}
+}
+
+.user-points-content{
+		text-align: center;
+		height: 30px;
+		border-radius: 5px;
+		border: 3px solid $acento;
+		margin-top: -10px;
+		.points, button{
+			width: 50%;
+			display: block;
+			float: left;
+			text-transform: uppercase;
+			height: 24px;
+			line-height: 24px;
+			background: none;
+			padding: 0;
+			border: 0;
+		}
+		.points{
+			background: $white;
+			color: $acent;
+		}
 }
 
 .container-center{

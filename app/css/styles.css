@@ -320,7 +320,25 @@ user
   right: 20px;
   top: -50px;
   width: 150px;
-  z-index: 50; }
+  z-index: 50;
+  /*
+	.points{
+		font-size: $font-size-base;
+		font-weight: bold;
+		position: absolute;
+		bottom: 0;
+		left: 70px;
+		padding: 2px;
+		background: $acento;
+		border-radius: 3px;
+	}
+	.username{
+		font-size: $font-size-small;
+	}
+	.btn-main{
+		width: 100%;
+		min-width: 100%;
+	}*/ }
   .user a {
     padding-top: 10px;
     display: block; }
@@ -335,23 +353,10 @@ user
     width: 100px;
     display: block;
     overflow: hidden;
-    border: 3px solid #00B7C6; }
+    border: 3px solid #00B7C6;
+    margin: 0 auto; }
     .user .avatar img {
       width: 100%; }
-  .user .points {
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    left: 70px;
-    padding: 2px;
-    background: #00B7C6;
-    border-radius: 3px; }
-  .user .username {
-    font-size: 11px; }
-  .user .btn-main {
-    width: 100%;
-    min-width: 100%; }
   @media only screen and (max-width: 765px) {
     .user {
       width: 100px;
@@ -359,6 +364,26 @@ user
       .user .avatar {
         width: 80px;
         height: 80px; } }
+
+.user-points-content {
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
+  border: 3px solid #00B7C6;
+  margin-top: -10px; }
+  .user-points-content .points, .user-points-content button {
+    width: 50%;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    background: none;
+    padding: 0;
+    border: 0; }
+  .user-points-content .points {
+    background: #fff;
+    color: #00B7C6; }
 
 .container-center {
   margin: 0 auto;
@@ -594,10 +619,11 @@ h4 {
       float: none; } }
 
 #btn-logout {
-  float: left;
-  font-size: 13px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 0; }
+  background: #00B7C6;
+  font-size: 12px; }
+  @media only screen and (max-width: 30em) {
+    #btn-logout {
+      font-size: 10px; } }
 
 #the-profile .avatar {
   position: relative;
@@ -648,6 +674,9 @@ h4 {
 
 #the-profile table {
   margin-top: 20px; }
+
+#the-profile .col-sm-6 .col-sm-6 .btn-main {
+  min-width: 220px; }
 
 #the-profile .main-title {
   margin-bottom: 0px; }
@@ -763,7 +792,7 @@ ol.list li:last-child {
 .participant-4 picture {
   border-color: #00B7C6 !important; }
 
-form input[type="text"], form input[type="email"] {
+form input[type="text"], form input[type="email"], form select, form option {
   width: 100%;
   color: #011133; }
 

@@ -51,7 +51,7 @@ a{
 header{
 	width: 100%;
 	position: relative;
-	height: 220px;
+	height: 150px;
 	 @include bp-small {
       height: 170px;
     }
@@ -280,24 +280,23 @@ user
 			width: 100%;
 		}
 	}
-	/*
+
 	.points{
 		font-size: $font-size-base;
 		font-weight: bold;
 		position: absolute;
-		bottom: 0;
-		left: 70px;
+		top: 5px;
+		left: 100px;
 		padding: 2px;
 		background: $acento;
 		border-radius: 3px;
 	}
-	.username{
-		font-size: $font-size-small;
-	}
+
+
 	.btn-main{
 		width: 100%;
 		min-width: 100%;
-	}*/
+	}
 	@include bp-medium {
    		//width: 100%;
    		width: 100px;
@@ -442,7 +441,7 @@ h4{
 	bottom:0;
 	left:0;
 	width: 100%;
-	height: 135px;
+	height: 142px;
 	a:hover{
 		color: $white;
 	}
@@ -450,7 +449,7 @@ h4{
     	height: 130px;
     }
     ul{
-    	width: 190px;
+    	width: 220px;
     	display: block;
     	margin: 0px auto 20px;
     	float: left;
@@ -460,7 +459,7 @@ h4{
     	@include bp-small {
     		float: none;
     		clear: both;
-    		width: 140px;
+    		width: 160px;
     		
     	}
     }
@@ -469,7 +468,7 @@ h4{
 
 .logo-deltaAm{
 	//float: left;
-	max-width: 350px;
+	max-width: 370px;
 	padding: 10px 0;
 	display: block;
 	margin: 0 auto;

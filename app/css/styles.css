@@ -152,7 +152,7 @@ a {
 header {
   width: 100%;
   position: relative;
-  height: 220px; }
+  height: 150px; }
   @media only screen and (max-width: 30em) {
     header {
       height: 170px; } }
@@ -320,25 +320,7 @@ user
   right: 20px;
   top: -50px;
   width: 150px;
-  z-index: 50;
-  /*
-	.points{
-		font-size: $font-size-base;
-		font-weight: bold;
-		position: absolute;
-		bottom: 0;
-		left: 70px;
-		padding: 2px;
-		background: $acento;
-		border-radius: 3px;
-	}
-	.username{
-		font-size: $font-size-small;
-	}
-	.btn-main{
-		width: 100%;
-		min-width: 100%;
-	}*/ }
+  z-index: 50; }
   .user a {
     padding-top: 10px;
     display: block; }
@@ -357,6 +339,18 @@ user
     margin: 0 auto; }
     .user .avatar img {
       width: 100%; }
+  .user .points {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    padding: 2px;
+    background: #00B7C6;
+    border-radius: 3px; }
+  .user .btn-main {
+    width: 100%;
+    min-width: 100%; }
   @media only screen and (max-width: 765px) {
     .user {
       width: 100px;
@@ -469,14 +463,14 @@ h4 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 135px; }
+  height: 142px; }
   #mainFooter a:hover {
     color: #fff; }
   @media only screen and (max-width: 30em) {
     #mainFooter {
       height: 130px; } }
   #mainFooter ul {
-    width: 190px;
+    width: 220px;
     display: block;
     margin: 0px auto 20px;
     float: left; }
@@ -486,10 +480,10 @@ h4 {
       #mainFooter ul {
         float: none;
         clear: both;
-        width: 140px; } }
+        width: 160px; } }
 
 .logo-deltaAm {
-  max-width: 350px;
+  max-width: 370px;
   padding: 10px 0;
   display: block;
   margin: 0 auto; }
@@ -618,9 +612,26 @@ h4 {
       margin: 0 auto;
       float: none; } }
 
+/*
+#btn-logout{
+   background: $acento;
+   font-size: 12px;
+   @include bp-small {
+    font-size: 10px;
+   }
+}
+*/
 #btn-logout {
   background: #00B7C6;
-  font-size: 12px; }
+  font-size: 12px;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left: 100px;
+  bottom: 0px;
+  z-index: 55; }
   @media only screen and (max-width: 30em) {
     #btn-logout {
       font-size: 10px; } }
@@ -762,11 +773,15 @@ h4 {
         background: url("../../images/mayan_tabla3.png") no-repeat top center;
         background-size: cover; } }
 
-ol.list li {
-  padding-bottom: 15px; }
+ol.list {
+  padding-top: 10px; }
+  ol.list li {
+    padding-bottom: 15px; }
+  ol.list li:last-child {
+    padding-bottom: 0; }
 
-ol.list li:last-child {
-  padding-bottom: 0; }
+strong {
+  font-family: "Neue Haas Unica W01 Medium It"; }
 
 .participant-1 img, .participant-1 .user-avatar {
   border-color: #66FF66 !important; }
@@ -791,6 +806,11 @@ ol.list li:last-child {
 
 .participant-4 picture {
   border-color: #00B7C6 !important; }
+
+.alert-normal {
+  background: #00B7C6;
+  color: #fff;
+  text-align: center; }
 
 form input[type="text"], form input[type="email"], form select, form option {
   width: 100%;
